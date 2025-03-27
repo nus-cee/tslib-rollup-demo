@@ -1,0 +1,38 @@
+{
+  "name": "@freddieckuo/tslib-rollup-npm",
+  "version": "0.0.1",
+  "description": "Testing",
+  "license": "MIT",
+  "author": "Freddie Chi Kuo",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:types": "tsc -p tsconfig.build.json",
+    "build": "npm run build:types && rollup -c"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^4.37.0",
+    "rollup-plugin-dts": "^6.2.1"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}
